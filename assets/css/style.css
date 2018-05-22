@@ -1,6 +1,7 @@
 body, html  {
     height:100%;
-    
+    font-family: 'Acme', sans-serif;
+    line-height: 3;
   
 }
 
@@ -16,4 +17,14 @@ body, html  {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#main{
+    margin-top:100px;
+    text-align: center;
+}
+
+#title{
+
+
 }

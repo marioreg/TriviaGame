@@ -33,7 +33,7 @@ var game = {
 
     correct:0,
     incorrect:0,
-    counter:120,
+    counter:60,
     countdown:function(){
         game.counter--;
         $("#counter").html(game.counter);
@@ -46,10 +46,10 @@ var game = {
 
     start:function(){
         timer= setInterval(game.countdown, 1000);
-        $("#sub").prepend('<h2>Time remaining: <span id="counter">120</span> Seconds</h2>');
+        $("#sub").prepend('<h3>Time remaining: <span id="counter">60</span> Seconds</h3>');
         $("#start-button").remove();
         for (var i=0; i<triviaQuestions.length; i++){
-            $("#sub").append('<h2>'+ triviaQuestions[i].question +'</h2>');
+            $("#sub").append('<h3>'+ triviaQuestions[i].question +'</h3>');
             for(var j = 0; j < triviaQuestions[i].answers.length; j++){
 
                 $("#sub").append("<input type= 'radio' name='question-" + i + "' value='" + triviaQuestions[i].answers[j] + "'>" +triviaQuestions[i].answers[j]);
@@ -122,7 +122,7 @@ var game = {
             $("#sub").append("<h3> Correct Answers: " + this.correct + "</h3>");
             $("#sub").append("<h3> Incorrect Answers: " + this.incorrect + "</h3>");
             $("#sub").append("<h3> Unanswered: " + (triviaQuestions.length - (this.incorrect + this.correct)) + "</h3>");
-            console.log("hello");
+            console.log("done");
         }
     
 
